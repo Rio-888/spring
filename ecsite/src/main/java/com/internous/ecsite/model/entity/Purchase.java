@@ -1,4 +1,4 @@
-package com.internous.ecsite.entity;
+package com.internous.ecsite.model.entity;
 
 import java.sql.Timestamp;
 
