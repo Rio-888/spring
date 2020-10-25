@@ -40,7 +40,7 @@ public class Goods {
 	public String getGoodsName() {
 		return goodsName;
 	}
-	public void setUserName(String goodsName) {
+	public void setGoodsName(String goodsName) {
 		this.goodsName = goodsName;
 	}
 	
