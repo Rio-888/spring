@@ -4,6 +4,8 @@
 <meta charset="UTF-8" />
 <link href="/css/style.css" th:href="@{/css/style.css}" rel="stylesheet" />
 <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" th:src="@{https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js}" ></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css" th:href="@{https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css}">
 <script type="text/javascript" src="/js/common.js" th:src="@{/js/common.js}"></script>
 <script>
   let cartList = [];
@@ -11,6 +13,23 @@
   $(() => {
 	  $('#loginForm').on('submit', login);
 	  $('.cartBtn').on('click', addCart);
+	  $('#buyBtn').on('click', buy);
+	  $('#historyBtn').on('click', showHistory);
+	  $('.removeBtn').on('click', removeCart);
+	  
+	  $("#history").dialog({
+		  autoOpen: false,
+		  width: 550,
+		  modal: true,
+		  buttons: [
+			  {
+				  text: 'OK',
+				  click: function() {
+					  $(this).dialog("close");
+				  }
+			  }
+		  ]
+	  });
   });
   
 </script>
